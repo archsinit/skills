@@ -1,26 +1,22 @@
 # Prosen
 
-Prosen is a small writing skill for agent-produced prose.
-
-Its rule is simple:
+Prosen is a small writing skill for agent-produced prose. It asks the agent to say what it means, trust the reader, preserve necessary reasoning, and stop when the prose works.
 
 > Write for the reader, not for the appearance of good writing.
 
-It does not try to make text statistically "human." It does not ban ordinary words, force sentence-length variation, or add quirks for authenticity. It asks the agent to say what it means, trust the reader, keep necessary reasoning, and stop when the prose works.
+It does not try to make text statistically "human." It does not ban ordinary words, force sentence-length variation, or add quirks for authenticity.
 
 The whole skill lives in [SKILL.md](SKILL.md).
 
 ## Writing comparison
 
-This is not a benchmark or ranking. It is one prompt run separately with four different writing skills so you can read the outputs and decide which approach fits your own work.
-
-External skills:
+The same prompt was run separately with Prosen and three other writing skills:
 
 - [Humanizer](https://github.com/spuvr/humanizer)
 - [Slopless](https://github.com/BioInfo/slopless)
 - [Human Writing](https://github.com/1999AZZAR/human-writing-skill)
 
-The outputs below were supplied from separate runs and are reproduced without rewriting.
+The outputs below are reproduced without edits. This single-prompt comparison is not a benchmark or ranking; use it to decide which approach fits your work.
 
 ### Prompt
 
@@ -76,8 +72,6 @@ These problems are easy to overlook because the extra work comes in small pieces
 
 Before adding a tool, it helps to ask what people will be able to stop doing. After it has been in use for a while, ask whether they have actually stopped. If the old tasks remain and new ones have appeared, the promise of easier work still needs to be kept.
 
-## More comparisons later
+## Further comparisons
 
-One essay is not enough to define a writing style. Future comparisons can use the same approach with documentation, business writing, explanations, creative work, and other forms of prose.
-
-The point is not to prove that one skill is best. It is to make the differences visible enough that a reader can choose for themselves.
+One essay cannot define a writing style. Further comparisons can use the same approach with documentation, business writing, explanations, creative work, and other prose, giving readers more examples to judge what fits their work.
