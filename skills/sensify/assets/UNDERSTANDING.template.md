@@ -1,43 +1,47 @@
-# Understanding Model
+# Understanding: <initiative>
 
-> Current understanding of this initiative. Keep this readable without the conversation; record only material claims and changes.
+> Current model, not a transcript. Keep only what changes decisions or later work.
 
 ## Purpose and approach
 
-- Initiative:
-- Outcome and why it matters:
-- Scope and success criteria:
-- Proposed mechanism:
-- Main constraints:
+What outcome is intended, why does it matter, and how is the current approach expected to achieve it? State the scope, success criteria, time horizon, and governing constraints where they matter.
 
-## Current understanding
+## What we currently know
 
-Describe how the initiative is intended to work. Distinguish established information from beliefs where the distinction affects a decision.
+Give a readable account. Distinguish verified facts from private facts the user supplied and conclusions derived from them. Link material sources and dates.
+
+## Definitions
+
+Record terms whose meaning could change the work.
+
+| Term | Agreed meaning |
+|---|---|
 
 ## Decisions
 
-| Decision | Why | Tradeoff accepted | Reconsider if |
-|---|---|---|---|
+| Decision | Rationale and tradeoff | Reconsider if |
+|---|---|---|
 
-## Critical assumptions and hypotheses
+## Assumptions and hypotheses
 
-| Claim | Current basis / confidence | Impact if wrong | Evidence needed |
+| Claim | Current evidence and confidence | Consequence if wrong | Validation needed |
 |---|---|---|---|
 
 ## Evidence and sources
 
-| Finding | Supports or challenges | Source / date | Limits |
+| Finding | Supports or challenges | Source and date | Limits |
 |---|---|---|---|
 
-## Risks, contradictions, and open questions
+## Risks and contradictions
 
-| Item | Why it matters | Owner / next step | Status |
-|---|---|---|---|
+| Issue | What it threatens | Response or next step |
+|---|---|---|
 
-## Related models
+## Open questions
 
-Link other initiatives only when they materially inform this one. Check whether a borrowed claim still applies here.
+| Question | Why it matters | Owner and status |
+|---|---|---|
 
-## Material history
+## Related models and history
 
-Summarize important decisions that were reopened or superseded, including what changed and why.
+Link related initiatives only when relevant. Record consequential decisions that were reopened or superseded, including what changed.

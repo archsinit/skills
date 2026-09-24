@@ -1,123 +1,25 @@
-# Questioning Engine
+# Questioning engine
 
-Sensify is not a fixed questionnaire. It is a dependency-aware elicitation process.
+Sensify asks from the edge of what is already understood. It does not follow a fixed questionnaire.
 
-## The understanding graph
+## Find the frontier
 
-Represent the work as a graph of material knowledge objects and unresolved questions.
+Map unresolved questions to the decisions, private facts, research, calculations, definitions, or contradictions they depend on. A question is ready for the current round when those prerequisites are settled enough to answer without guessing.
 
-An unresolved question can depend on:
+For example, the onboarding workflow for a customer segment usually depends on which segment the business will serve. Ask about the segment first. An answer may make the workflow question irrelevant.
 
-- another user decision;
-- a private fact;
-- external research;
-- a calculation;
-- a definition;
-- an earlier unresolved contradiction.
+Among ready questions, prioritize what would cause the greatest harm if wrong, has the weakest basis, unlocks the most later work, costs the most to reverse, or blocks useful progress elsewhere. Use judgment rather than a numeric score.
 
-A question belongs on the current **frontier** only when its prerequisites are settled enough that answering it will not require guessing at upstream answers.
+## Ask a round the user can answer
 
-## Why frontier ordering matters
+Favor fewer, fuller rounds of related, independent questions. The user may dictate one free-form reply; do not require them to answer in a numbered format. More than seven questions can fit when each is concise and none depends on an answer still open in that round.
 
-Asking downstream questions too early causes accidental commitments.
+Ask fewer when one answer could change the rest, a question is demanding, or a contradiction must be settled first. Do not expose the entire backlog.
 
-Example:
+For a material decision, give the user enough of your thinking to accept or correct it: the current read, your recommendation, its basis, and the tradeoff or uncertainty that matters. Use labels if they make a complex choice easier to answer. Avoid turning every question into the same form.
 
-- Q1: Which customer segment are we targeting?
-- Q2: What onboarding workflow should that customer receive?
+Do not ask the user for a fact you can research, a detail that only fills a document section, or an implementation choice before the objective and constraints are clear. Replace “What do you think?” with the decision that needs to be made.
 
-If the customer segment is unresolved, Q2 should normally wait. Otherwise the user and agent may design a workflow for a customer that is later discarded.
+## Recompute after an answer
 
-## Priority factors
-
-Prioritize frontier questions using qualitative judgment across five dimensions.
-
-### 1. Impact if wrong
-
-How much damage would a wrong answer cause?
-
-High-impact answers can invalidate strategy, architecture, economics, compliance, feasibility, or major downstream work.
-
-### 2. Uncertainty
-
-How weak is the current basis?
-
-A high-impact question with high uncertainty generally deserves early attention.
-
-### 3. Downstream leverage
-
-How many other choices depend on this answer?
-
-Resolve high-leverage branching decisions before details.
-
-### 4. Cost of reversal
-
-How expensive, slow, disruptive, or politically difficult would it be to change later?
-
-Hard-to-reverse choices deserve more scrutiny before commitment.
-
-### 5. Blocking power
-
-Does the unresolved issue prevent useful reasoning elsewhere?
-
-Questions that unblock multiple branches should move forward.
-
-## Round size
-
-Favor fewer, fuller rounds. Ask a coherent batch of independent, high-leverage questions that the user can answer in one dictated response; a round may exceed seven questions when that reduces repetition without burying a consequential choice.
-
-Use fewer when:
-
-- one decision is likely to reshape most of the model;
-- the question is cognitively demanding;
-- the answer may invalidate assumptions behind the rest of the frontier;
-- a contradiction needs to be resolved before useful progress.
-
-Use a larger batch only when the questions belong on the current frontier and none depends on an answer still open in the same round. Group related questions, keep each concise, and let the user answer in free form.
-
-Do not dump the full internal backlog on the user.
-
-## Question construction
-
-A strong question contains enough analysis that the user can decide rather than perform the agent's reasoning work. For a material choice, briefly give the current read, recommendation, basis, and consequential tradeoff or uncertainty. Use labels only when they make a complex choice easier to answer. The user should be able to answer a whole round naturally, disagree, or provide missing context.
-
-## Avoid lazy questions
-
-Do not ask:
-
-- "What do you think?" when a narrower decision can be formulated;
-- "Can you tell me about X?" when specific unknowns are identifiable;
-- for facts available in the workspace or public sources;
-- multiple questions that secretly depend on the first answer;
-- implementation details before the objective or governing constraints are understood;
-- questions whose only purpose is to fill a document section.
-
-## Recommendations are part of elicitation
-
-A recommendation exposes the agent's current mental model. The user can correct not only the answer but the reasoning behind it.
-
-Recommendations should distinguish:
-
-- evidence;
-- inference;
-- preference/tradeoff;
-- uncertainty.
-
-Do not use confidence theater. A firm tone is not a substitute for strong evidence.
-
-## Recompute after every meaningful answer
-
-The frontier is dynamic.
-
-A single answer may:
-
-- settle several questions;
-- create new questions;
-- invalidate old questions;
-- change priority;
-- reveal an assumption;
-- create a contradiction;
-- trigger research;
-- reopen an earlier decision.
-
-Do not continue mechanically through a prewritten questionnaire after the model changes.
+A reply may settle several questions, expose a premise, create a contradiction, or reopen a decision. Update the model, then rebuild the frontier. Do not continue down a prepared list when the answer has changed what matters.
