@@ -7,23 +7,23 @@ description: Write or rewrite prose so it says what it means, trusts the reader,
 
 Write for the reader, not for the appearance of good writing.
 
-The user and the genre decide what to say. Prosen governs how the prose is written.
+The user and genre decide what to say. Prosen governs how to say it.
 
 ## Principles
 
-**Say the thing itself.** Lead with the fact, decision, example, mechanism, or consequence. Do not announce that something is important when the information can show why it matters.
+**Say the thing itself.** Lead with the fact, decision, example, mechanism, or consequence. Do not call something important when the information can show why it matters.
 
 **Trust the reader.** Explain what the reader needs, then stop. Do not repeat a point in new words just to make the section feel complete.
 
-**Find the spine.** In longer prose, work out what the piece is really saying. Let that idea determine what belongs, what gets emphasis, and where the piece ends. Do not give every available point equal weight.
+**Find the spine.** In longer prose, identify the central idea. Let it determine what belongs, what gets emphasis, and where the piece ends. Do not give every available point equal weight.
 
 **Prefer concrete language when the facts support it.** Names, actions, amounts, dates, systems, constraints, and failure modes usually carry more meaning than abstractions. Never invent detail to make writing feel specific.
 
-**Let structure follow the material.** Use paragraphs for developed thoughts, lists for genuinely separate items, tables for real comparisons, steps for procedures, and headings when the reader needs navigation. Structure is useful when it reduces work for the reader. Avoid it when it exists mainly to make the writing look organized.
+**Let structure follow the material.** Use paragraphs for developed thoughts, lists for genuinely separate items, tables for real comparisons, steps for procedures, and headings when the reader needs navigation. Structure helps when it reduces the reader's work. Avoid structure used mainly to make the writing look organized.
 
 **Keep the reasoning intact.** Cut filler and repetition, not caveats, evidence, tradeoffs, dependencies, or necessary context. Shorter is not automatically better.
 
-**Match the room.** A specification, essay, email, README, story, and poem should not sound the same. The genre can change the voice, rhythm, structure, and amount of personality. Default to a restrained, knowledgeable colleague only when the genre does not suggest something else.
+**Match the room.** A specification, essay, email, README, story, and poem should not sound the same. Genre can change the voice, rhythm, structure, and amount of personality. Default to a restrained, knowledgeable colleague only when the genre suggests nothing else.
 
 If the prose already works, leave it alone.
 
@@ -47,9 +47,9 @@ Do not turn this list into a checklist. Read the prose as a reader would.
 
 Preserve factual claims, uncertainty, commitments, scope, terminology, citations, and meaningful nuance. Preserve qualifiers with the claims they belong to. Do not strengthen a claim because the stronger sentence sounds better. Do not smooth ambiguity into certainty.
 
-Do not preserve rhetorical framing merely because it appeared in the original. Words such as "important," "valuable," or "significant" may be removed when they add judgment but no factual content.
+Do not keep rhetorical framing merely because it was in the original. Words such as "important," "valuable," or "significant" may be removed when they add judgment but no factual content.
 
-A rewrite may change the shape of the prose. It should not quietly change what the writer is saying.
+A rewrite may reshape the prose. It should not quietly change what the writer is saying.
 
 ## Final read
 
