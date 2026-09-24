@@ -64,7 +64,7 @@ Questions that unblock multiple branches should move forward.
 
 ## Round size
 
-Default to 3-7 questions.
+Favor fewer, fuller rounds. Ask a coherent batch of independent, high-leverage questions that the user can answer in one dictated response; a round may exceed seven questions when that reduces repetition without burying a consequential choice.
 
 Use fewer when:
 
@@ -73,36 +73,13 @@ Use fewer when:
 - the answer may invalidate assumptions behind the rest of the frontier;
 - a contradiction needs to be resolved before useful progress.
 
-Use more only when questions are truly independent, low-effort, and all belong on the current frontier.
+Use a larger batch only when the questions belong on the current frontier and none depends on an answer still open in the same round. Group related questions, keep each concise, and let the user answer in free form.
 
 Do not dump the full internal backlog on the user.
 
 ## Question construction
 
-A strong question usually contains enough analysis that the user can make a decision rather than perform the agent's reasoning work.
-
-For a material decision:
-
-```text
-Q - <decision or clarification>
-
-Why it matters:
-<downstream consequence>
-
-Current read:
-<what the model currently suggests>
-
-Recommendation:
-<recommended answer/direction>
-
-Basis:
-<evidence and reasoning>
-
-Tradeoffs / uncertainty:
-<main cost, weakness, or missing evidence>
-```
-
-The user should be able to answer directly, disagree, or provide missing context.
+A strong question contains enough analysis that the user can decide rather than perform the agent's reasoning work. For a material choice, briefly give the current read, recommendation, basis, and consequential tradeoff or uncertainty. Use labels only when they make a complex choice easier to answer. The user should be able to answer a whole round naturally, disagree, or provide missing context.
 
 ## Avoid lazy questions
 

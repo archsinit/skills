@@ -1,11 +1,11 @@
 ---
 name: sensify
-description: Turn an incomplete, implicit, uncertain, or contradictory idea, plan, decision, or body of knowledge into an explicit, evidence-aware, decision-ready understanding. Use for rigorous questioning, requirements elicitation, planning, assumption discovery, research, sensemaking, or when important work should not proceed on hidden assumptions.
+description: Build an explicit, evidence-aware, decision-ready understanding through research, questioning, and challenge. Use only when the user explicitly asks to Sensify something or unmistakably requests this understanding-building interview.
 ---
 
 # Sensify
 
-Sensify before executing substantial downstream work when misunderstanding would be costly.
+Start only on an explicit request to Sensify, or an unmistakable request for this understanding-building interview. Do not activate merely because ordinary work is complex or ambiguous. An explicit request to Sensify a business should also load `sensify-business` when available.
 
 The objective is not agreement, speed, or an exhaustive questionnaire. The objective is a **decision-ready shared model** in which important facts, beliefs, decisions, assumptions, constraints, evidence, contradictions, and unknowns are explicit.
 
@@ -19,11 +19,11 @@ The objective is not agreement, speed, or an exhaustive questionnaire. The objec
 6. **Persist understanding as it changes.** Capture resolved terms, evidence, decisions, assumptions, risks, and open questions as they become material.
 7. **Prioritize by leverage, not document order.** Ask what can most change or invalidate downstream reasoning.
 8. **Do not confuse uncertainty with failure.** A model can be decision-ready while containing explicit low-confidence hypotheses. Hidden uncertainty is the problem.
-9. **Do not start downstream implementation while Sensify is active** unless the user explicitly ends/suspends the Sensify phase or the calling workflow defines an approved handoff.
+9. **Keep the phases distinct.** Do not start substantial downstream implementation while Sensify is active. The user may end or suspend the interview at any time; record consequential gaps, then follow the user's direction. A confirmed handoff also ends the phase.
 
 ## Working model
 
-Use the typed knowledge model in [references/knowledge-model.md](references/knowledge-model.md). Keep track of dependencies between material items, not just a flat list of notes.
+Use the typed knowledge model in [references/knowledge-model.md](references/knowledge-model.md). Track material dependencies. Keep the user-facing model readable; use structured objects and IDs for claims whose type, evidence, history, or relationships matter, rather than turning every sentence into a record.
 
 When persistence is available, follow [references/persistence-protocol.md](references/persistence-protocol.md).
 
@@ -80,21 +80,11 @@ See [references/questioning-engine.md](references/questioning-engine.md).
 
 ### 5. Ask a focused round
 
-Default to **3-7 high-leverage questions** in a normal round. Ask fewer when one answer is likely to reshape the model substantially.
+Favor fewer, fuller rounds that the user can answer by dictation. Bundle independent high-leverage questions in one coherent round; do not impose a seven-question ceiling. Ask fewer when one answer is likely to reshape the model substantially. Keep dependent questions for a later round.
 
 Do not include a question whose answer depends on another unresolved question in the same round.
 
-For material decision questions, normally include:
-
-- **Question** - what must be decided or clarified;
-- **Why it matters** - downstream consequence;
-- **Current read** - what the model currently suggests;
-- **Recommendation** - your preferred answer or direction;
-- **Basis** - evidence/reasoning behind the recommendation;
-- **Tradeoffs** - what the recommendation gives up;
-- **Confidence / uncertainty** - where your recommendation may be wrong.
-
-Keep the presentation concise enough that the user can answer directly.
+For a material decision, expose the current read and recommendation, with the reason, main tradeoff, and uncertainty that could change it. Include enough context for the user to answer or correct the model. Do not force every question into a labeled template. Accept a free-form answer to a whole round, resolve what it settles, and follow up only on material ambiguity.
 
 ### 6. Update immediately
 
@@ -158,7 +148,7 @@ Use [references/completion-criteria.md](references/completion-criteria.md). In g
 
 Present the current understanding, critical assumptions, unresolved uncertainties, and any validation work still required.
 
-Ask the user to confirm that the model is an adequate representation of their intent before treating Sensify as complete.
+Ask the user to confirm that the model adequately represents their intent before treating Sensify as complete. If they choose to move on earlier, preserve the remaining material gaps and proceed as directed.
 
 Completion means **shared, decision-ready understanding**. It does not mean every hypothesis has been validated or that the plan is guaranteed to succeed.
 

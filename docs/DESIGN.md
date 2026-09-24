@@ -66,7 +66,7 @@ A confident statement is not automatically a fact.
 
 Sensify uses a dependency frontier rather than a document-order questionnaire.
 
-A normal round should contain roughly 3-7 high-leverage questions whose prerequisites are already sufficiently settled. Questions that depend on answers still open in the round wait for a later frontier.
+A round should bundle independent, high-leverage questions whose prerequisites are sufficiently settled. Favor fewer, fuller dictation-friendly rounds; questions that depend on answers still open in the round wait for a later frontier.
 
 Priority is driven by impact if wrong, uncertainty, downstream leverage, reversibility, and blocking power.
 
@@ -96,6 +96,28 @@ Business plans, presentations, financial models, operating plans, process maps, 
 ### Validation planning is in scope; full execution is downstream
 
 Sensify should identify which experiments, customer interviews, pilots, or other evidence are needed to test critical hypotheses. Executing a substantial validation program is a separate downstream workflow.
+
+## Decisions from the follow-up interview
+
+### Explicit invocation
+
+Sensify starts only when the user names it or unmistakably requests its understanding-building interview. Complexity alone does not activate it. An explicit Sensify request about a business brings in the business specialization.
+
+### Dictation-friendly interview rounds
+
+Prefer fewer, fuller rounds of independent high-leverage questions. Do not impose a seven-question ceiling or a fixed labeled form on each question. Accept free-form answers, update the model, and ask a later round only for material gaps.
+
+### Readable, evolving knowledge
+
+Keep one canonical evolving model per business, project, or substantial initiative, with links to related models. The user should be able to read a coherent account; typed records are reserved for material claims that need provenance, dependencies, or history. Downstream work should read the model and write consequential discoveries back to it without automatically restarting Sensify.
+
+### Storage direction
+
+A growing knowledge system is the desired home. Notion is a preferred candidate because a ChatGPT plugin exists, but suitability of its read, update, link, and history capabilities is unverified. Keep the logical model storage-neutral and use an available local fallback until a connected backend is proven suitable. Maintain one declared source of truth per initiative.
+
+### User-controlled exit
+
+The user may end or suspend an interview before decision-ready completion. Preserve consequential gaps and follow their direction without labeling the model complete.
 
 ## Completion philosophy
 

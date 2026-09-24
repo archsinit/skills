@@ -95,4 +95,4 @@ Before handoff, present a compact completion view:
 - validation/research still required;
 - any decisions you still recommend reconsidering.
 
-Ask the user to confirm that this is an adequate representation of their intent.
+Ask the user to confirm that this adequately represents their intent before declaring Sensify complete. The user may instead end or suspend the interview at any point. In that case, identify and persist consequential gaps without claiming decision-ready completion, then follow the user's requested next step.

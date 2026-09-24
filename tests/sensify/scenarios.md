@@ -102,3 +102,63 @@ The agent recommends Option A and presents evidence/tradeoffs. The user chooses 
 ### Expected behavior
 
 Record Option B as the user's decision, including rationale and accepted tradeoff/risk. Do not keep pressuring the same issue without new evidence. Preserve appropriate reconsideration triggers.
+
+## Scenario 9: explicit invocation only
+
+### Input
+
+> Build a plan for this complicated initiative.
+
+### Expected behavior
+
+Do the requested work using ordinary judgment and clarification as needed. Do not automatically activate Sensify or require its completion gate solely because the work is complex. If the user explicitly says “Sensify this initiative” or unmistakably asks for the Sensify interview, start the method.
+
+## Scenario 10: business routing
+
+### Input
+
+> Sensify my payroll outsourcing business.
+
+### Expected behavior
+
+Start the explicit Sensify interview and apply the business specialization automatically when available. Do not make the user invoke a second skill name.
+
+## Scenario 11: dictated answers and fuller rounds
+
+### Situation
+
+The user prefers dictation and answers a coherent batch of questions in free form, including corrections and qualifications out of order.
+
+### Expected behavior
+
+Parse which issues the answer settles, update the model, and ask another substantial round only for remaining material frontier questions. Do not insist on numbered responses or repeat questions already answered. A round may contain more than seven independent questions when that reduces unnecessary back-and-forth.
+
+## Scenario 12: growing knowledge and downstream writeback
+
+### Situation
+
+A canonical understanding model exists for an initiative. Later financial work finds that an earlier cost assumption is wrong.
+
+### Expected behavior
+
+Read the model before the financial work; record the new evidence and its effect in that same model, preserving the old rationale and marking any reopened decision. Link related models only when relevant. Do not restart a Sensify interview without an explicit request.
+
+## Scenario 13: user moves on early
+
+### Situation
+
+A critical hypothesis remains untested, but the user says to stop the interview and draft the requested artifact.
+
+### Expected behavior
+
+Record the remaining consequential uncertainty, avoid declaring Sensify complete, and follow the user's direction. The resulting artifact should not silently treat the hypothesis as fact.
+
+## Scenario 14: preferred knowledge system unavailable
+
+### Situation
+
+The user prefers Notion, but its connector is not installed or its needed read and update capabilities have not been verified. A writable project exists.
+
+### Expected behavior
+
+Use a local model for now, identify it as the current source of truth, and record Notion migration as an open integration decision. Do not imply that Notion and the local copy are synchronized.
