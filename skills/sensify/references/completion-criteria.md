@@ -1,98 +1,25 @@
-# Completion Criteria
+# Completion criteria
 
-Sensify does not aim for exhaustive knowledge. It aims for **decision-ready understanding**.
+Sensify is ready to hand off when the next work can proceed without a consequential misunderstanding hidden inside the model. It does not need to settle every question or prove that the approach will succeed.
 
-The process is complete when the remaining uncertainty is explicit and does not silently block the intended next work.
+## Test readiness
 
-## Completion test
+The model should explain the intended outcome, why it matters, what success means for the next step, and how the current approach is expected to produce it. Major dependencies and causal claims must be visible.
 
-Evaluate the model across the following dimensions.
+Material statements should retain their type and provenance. Decisions need enough rationale and tradeoff to guide later work; hard-to-reverse choices deserve more scrutiny. Critical assumptions and weakly supported claims must be explicit, challenged where warranted, and linked to validation needs. Confidence should match the evidence.
 
-### Outcome clarity
+Resolve material contradictions, explain them as changed or superseded claims, or record that the user has knowingly left them open. Define terms precisely enough to prevent divergent interpretations. Consider plausible failures that could undermine the model and connect the important risks to the beliefs or decisions they threaten.
 
-- The intended outcome is explicit.
-- The reason it matters is understood enough to resolve tradeoffs.
-- Success criteria are sufficiently concrete for the intended next step.
+No unanswered high-leverage question should silently block major downstream reasoning. Classify what remains as validation work, lower-priority detail, an external dependency, or an intentional deferral. Store the current model in its declared canonical location when one is available; a later reader should understand it without replaying the conversation.
 
-### Mechanism clarity
+## Uncertainty that can remain
 
-- The model describes not only what the user wants but how they currently intend to achieve it.
-- Major dependencies and causal assumptions in that mechanism are visible.
+An untested hypothesis, an unknowable future event, an accepted risk, or a deferred detail need not block completion. An unknown number can remain if the next decision does not require it. State each consequential gap and what depends on it.
 
-### Epistemic clarity
+Completion should wait if a critical assumption still appears as fact, a contradiction changes the plan's meaning, a key term remains ambiguous, or an unresolved user decision blocks the next work. It should also wait if the approach conflicts with a hard constraint, a researchable fact has been handed to the user, or a central causal claim has neither evidence nor an acknowledged need for validation.
 
-- Material claims are correctly distinguished as facts, private facts, assumptions, hypotheses, decisions, constraints, preferences, risks, or derived conclusions.
-- Important evidence and provenance are recorded.
-- Confidence is not overstated.
+## Confirm or move on
 
-### Decision clarity
+Before declaring completion, give the user a compact view of the current model: intended outcome and mechanism, key decisions, critical assumptions, strongest evidence, risks, unresolved questions, and validation still needed. Name any decision you recommend revisiting. Ask whether this represents their intent accurately.
 
-- Material decisions are explicit.
-- Important decisions have rationale and tradeoffs.
-- Hard-to-reverse decisions have appropriate scrutiny.
-- Reconsideration triggers exist where useful.
-
-### Assumption clarity
-
-- Critical assumptions are explicit rather than embedded in prose.
-- High-impact weak assumptions have been challenged.
-- Validation/research needs are identified.
-
-### Contradiction clarity
-
-- Material contradictions are resolved, explained as temporal/superseded, or consciously accepted as unresolved.
-- Definitions do not conflict in ways that would distort downstream work.
-
-### Dependency clarity
-
-- No unresolved high-leverage question blocks major downstream reasoning.
-- Remaining open questions are categorized as validation work, low-priority detail, externally blocked, or deliberately deferred.
-
-### Risk clarity
-
-- Plausible failure modes that could invalidate the model have been considered.
-- Material risks are visible and linked to the beliefs/decisions they threaten.
-
-### Persistence clarity
-
-- The current model is stored in the selected canonical backend when persistence is available.
-- The persistent model is understandable without rereading the entire conversation.
-
-## What does not block completion
-
-Sensify can complete with:
-
-- hypotheses that require future experiments;
-- external events that cannot yet be known;
-- deliberately deferred low-leverage choices;
-- risks that cannot be eliminated;
-- disagreement where the user consciously accepts the tradeoff;
-- unknown numeric values that are not required for the next decision.
-
-These must be explicit.
-
-## What should block completion
-
-Do not declare completion while any of these remain hidden or unresolved:
-
-- a critical assumption masquerading as fact;
-- a contradiction that changes the meaning of the plan;
-- an undefined term that causes different interpretations;
-- an unresolved decision on which major downstream work depends;
-- a researchable fact being delegated to the user;
-- a hard constraint that conflicts with the proposed mechanism;
-- a core causal claim with no acknowledged evidence or validation need.
-
-## Final confirmation
-
-Before handoff, present a compact completion view:
-
-- current understanding;
-- critical decisions;
-- critical assumptions/hypotheses;
-- material risks;
-- unresolved questions;
-- validation/research still required;
-- any decisions you still recommend reconsidering.
-
-Ask the user to confirm that this adequately represents their intent before declaring Sensify complete. The user may instead end or suspend the interview at any point. In that case, identify and persist consequential gaps without claiming decision-ready completion, then follow the user's requested next step.
+The user may end or suspend the interview earlier. Preserve the consequential gaps, do not describe the model as decision-ready, and follow their next instruction.

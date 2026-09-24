@@ -1,126 +1,29 @@
-# Sensify Knowledge Model
+# Knowledge model
 
-Sensify stores understanding as typed knowledge objects rather than undifferentiated notes.
+Record material understanding as claims whose meaning and basis remain clear to a later reader. Type a claim when the distinction affects a decision; do not turn ordinary prose into a database.
 
-The purpose of typing is epistemic hygiene: future agents should know not only *what the model says* but *what kind of claim it is, why it is believed, and how strongly it should be trusted*.
+## Claim types
 
-## Object types
+| Type | Use it for |
+|---|---|
+| `FACT` | Externally verifiable information supported by evidence. Note its source and date when it may change. |
+| `PRIVATE_FACT` or `FOUNDER_FACT` | Information supplied by the user or organization that available sources cannot independently verify, such as budget or team capacity. |
+| `DECISION` | A choice among alternatives. Record why it was made, what it gives up, who owns it, and what could cause reconsideration when those details matter. |
+| `ASSUMPTION` | A premise the model relies on without adequate evidence or validation. Make hidden premises visible. |
+| `HYPOTHESIS` | A claim deliberately left open for testing. State what would support or contradict it. Research elsewhere may inform it without validating this setting. |
+| `CONSTRAINT` | A boundary the work must respect unless changed, such as a legal requirement, deadline, or non-negotiable choice. |
+| `PREFERENCE` | Something desirable but open to tradeoff. Do not silently treat it as a constraint. |
+| `DEFINITION` | The agreed meaning of a term that might otherwise be vague or used differently. |
+| `RISK` | A plausible adverse condition. Capture its cause, consequence, detectability, response, and threatened claims or decisions where useful. Avoid invented probabilities. |
+| `QUESTION` | An unresolved matter requiring research, user input, validation, or a decision. Track what must be settled first and what it blocks. |
+| `EVIDENCE` | A source, observation, calculation, document, or experiment that supports or challenges a claim. Link it to that claim. |
+| `DERIVED_CONCLUSION` | A conclusion drawn from stated premises or calculations. Revisit it when a premise changes. |
 
-### FACT
+Confidence describes the quality of a claim's current basis, not whether it is true. Use `high` for strong relevant evidence with little material uncertainty; `medium` when useful evidence still leaves an important gap; `low` for weak or indirect support; and `unknown` when there is no sound basis. Do not invent numeric probabilities. Importance describes the damage if the claim is wrong. Reserve `critical` for claims able to invalidate the central outcome or mechanism.
 
-Externally verifiable information supported by evidence.
+## Record only useful fields
 
-Examples:
-
-- a published regulation;
-- a product's documented feature;
-- a market statistic from an identified source;
-- a date or contractual term found in a source document.
-
-A fact should carry source and freshness metadata when either can affect downstream use.
-
-### FOUNDER_FACT / PRIVATE_FACT
-
-Information supplied by the user or organization that may be true in their context but is not independently verifiable through available sources.
-
-Examples:
-
-- available budget;
-- current team capacity;
-- an internal customer count;
-- a private operational limitation.
-
-Do not relabel these as external FACTs merely because the user states them confidently.
-
-### DECISION
-
-A deliberate choice among alternatives.
-
-Important decisions should record:
-
-- rationale;
-- alternatives considered;
-- tradeoffs accepted;
-- decision owner;
-- dependencies;
-- reconsideration triggers;
-- current status.
-
-### ASSUMPTION
-
-Something the model is currently relying on without adequate evidence or explicit validation.
-
-An assumption may have been made consciously or unconsciously. Sensify should actively convert hidden assumptions into explicit ASSUMPTION objects.
-
-### HYPOTHESIS
-
-A claim intentionally framed for validation.
-
-Hypotheses should state what evidence would support or contradict them. External research can inform a hypothesis without necessarily validating it in the target context.
-
-### CONSTRAINT
-
-A boundary that the work must respect unless explicitly changed.
-
-Examples:
-
-- legal limitations;
-- budget ceilings;
-- geographic scope;
-- time deadlines;
-- required technology;
-- non-negotiable user choices.
-
-Distinguish actual constraints from preferences presented as constraints.
-
-### PREFERENCE
-
-A desired property that can be traded off if needed.
-
-Preferences should not silently become hard constraints.
-
-### DEFINITION
-
-The canonical meaning of a term within the model.
-
-Definitions are especially important when a term is overloaded, vague, domain-specific, or used differently by different stakeholders.
-
-### RISK
-
-A plausible adverse condition or failure mode with meaningful impact.
-
-A risk should identify, where useful:
-
-- trigger/cause;
-- consequence;
-- likelihood or uncertainty;
-- detectability;
-- mitigation or response;
-- related assumptions/decisions.
-
-Avoid false precision when probability is unknown.
-
-### QUESTION
-
-An unresolved issue that may require research, user input, validation, or a decision.
-
-Questions should carry dependencies and priority so the interview engine can determine whether they belong on the current frontier.
-
-### EVIDENCE
-
-A source, observation, calculation, experiment, interview result, file, or other item that supports or contradicts a claim.
-
-Evidence should not be stored without the claim(s) it bears on.
-
-### DERIVED_CONCLUSION
-
-A conclusion produced from explicit premises, calculations, or combined evidence.
-
-Record the premises. If a premise changes, the conclusion should be reconsidered.
-
-## Suggested object fields
-
-Use only fields that add value; this is a logical schema, not a requirement to fill every field for every object.
+The following is a logical schema, not a form to complete for every claim:
 
 ```yaml
 id: K-001
@@ -147,97 +50,17 @@ owner: user | agent | shared | external
 notes: "..."
 ```
 
-## States
+Use a status that fits the type:
 
-Different object types use different useful states.
+- Decisions: `proposed`, `decided`, `validated`, `reopened`, `superseded`, `invalidated`. `Validated` means later evidence supports the rationale, not that the choice is permanently correct.
+- Assumptions and hypotheses: `untested`, `partially-supported`, `supported`, `contradicted`, `unknown`, `retired`.
+- Questions: `open`, `researching`, `blocked`, `answered`, `deferred`, `not-material`.
+- Facts and evidence, when useful: `current`, `stale`, `superseded`, `disputed`.
 
-### Decisions
+## Preserve where claims came from
 
-- `proposed`
-- `decided`
-- `validated` - later evidence supports the decision's underlying rationale; do not interpret this as permanently correct
-- `reopened`
-- `superseded`
-- `invalidated`
+Keep user statements, documents, outside research, calculations, and inference distinct. Do not combine them into a single fact unless the resulting claim is supported. Date claims that may go stale; record the geography, population, and period when those limits matter. When credible evidence conflicts, retain both sides and lower confidence as appropriate.
 
-### Assumptions and hypotheses
+Treat contradictions as part of the model. Link the conflicting claims and determine whether the cause is terminology, outdated information, a changed decision, incompatible constraints, or disputed evidence. Resolve the conflict or leave it visibly open. Do not erase it by rewriting the history.
 
-- `untested`
-- `partially-supported`
-- `supported`
-- `contradicted`
-- `unknown`
-- `retired`
-
-### Questions
-
-- `open`
-- `researching`
-- `blocked`
-- `answered`
-- `deferred`
-- `not-material`
-
-### Facts/evidence
-
-When relevant, track:
-
-- `current`
-- `stale`
-- `superseded`
-- `disputed`
-
-## Confidence
-
-Confidence is not the same as truth.
-
-Use confidence to communicate the quality of the current basis:
-
-- **High** - strong, relevant evidence and low material uncertainty.
-- **Medium** - useful evidence exists, but important uncertainty remains.
-- **Low** - weak, indirect, incomplete, or highly context-dependent evidence.
-- **Unknown** - there is not yet a reasonable basis for confidence.
-
-Do not invent numeric probabilities merely to make the model look rigorous.
-
-## Importance
-
-Importance reflects the damage or downstream distortion if the item is wrong or misunderstood.
-
-Use `critical` sparingly for items capable of invalidating the core objective, business model, architecture, economics, legal feasibility, or another central dependency.
-
-## Provenance rules
-
-1. Preserve whether a claim came from the user, external evidence, a document, a calculation, or inference.
-2. Do not merge claims from different provenance into a single "fact" unless the resulting statement is genuinely supported.
-3. For time-sensitive facts, store the date observed or published.
-4. For geographically or population-specific evidence, record the relevant geography/population.
-5. When evidence conflicts, store both sides and mark the conflict rather than choosing silently.
-
-## Contradictions
-
-A contradiction is first-class knowledge.
-
-When two material items conflict:
-
-- link them;
-- explain the nature of the conflict;
-- determine whether it is a terminology problem, outdated information, a changed decision, incompatible constraints, or genuinely conflicting evidence;
-- resolve it or keep it explicitly open.
-
-Never erase a contradiction by rewriting history without explanation.
-
-## Reconsideration triggers
-
-For important decisions, record what future condition should cause the decision to be reopened.
-
-Examples:
-
-- a cost exceeds a threshold;
-- regulation changes;
-- target customer behavior differs from the assumption;
-- a dependency becomes unavailable;
-- a performance requirement cannot be met;
-- new evidence undermines the original rationale.
-
-This lets future agents challenge decisions intelligently instead of either treating them as permanent or relitigating them arbitrarily.
+For consequential decisions, record a reconsideration trigger. A cost crossing a threshold, a changed regulation, a failed dependency, or evidence that users behave differently can justify reopening the choice. Without such a trigger, a later agent may either accept a weak decision forever or keep questioning it without cause.

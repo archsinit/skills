@@ -1,129 +1,19 @@
-# Research Protocol
+# Research protocol
 
-Research is part of Sensify, not a service the user must repeatedly request.
+Before asking the user for a fact, check whether you can find it in available files, connected sources, public material, or a calculation. If you can, do that work yourself. Ask the user for private context that is not available there. For a choice, make a recommendation and leave the decision to them.
 
-## Responsibility rule
+A public claim may require current law, market data, competitor offerings, pricing, technical documentation, or standards. A project claim may require reading a contract, code, uploaded data, or an earlier decision. Compute a result when the inputs are known, and retain the inputs and method if the result matters.
 
-Before asking the user a factual question, ask:
+Outside evidence can make a context-specific hypothesis more or less plausible. It does not prove that the user's customers, team, or system will behave the same way. Keep that distinction visible.
 
-> Can I reasonably discover this through available sources, files, tools, calculations, or research?
+## Judge the evidence
 
-If yes, do the work yourself.
+Prefer sources able to support the particular claim. Authoritative primary sources, direct measurements, and first-party documents are usually strongest for precise facts. Independent research and careful synthesis can help. Community experience can illuminate lived problems while remaining weak evidence for a market total or legal rule. Do not treat an anecdote as a measured base rate.
 
-## Research categories
+For a claim that may change, record when the source was published or observed, when you accessed it if useful, and which period it describes. Note the relevant geography, population, business size, or regulatory setting. Evidence from elsewhere may still be useful, but explain the gap before applying it.
 
-### Public factual question
+When credible sources disagree, keep the disagreement. Check whether they use different definitions, periods, populations, or methods. State what each source supports and adjust confidence; do not force a consensus.
 
-Research it directly.
+## Put findings to work
 
-Examples:
-
-- laws and regulations;
-- market statistics;
-- competitor offerings;
-- current pricing published online;
-- technical documentation;
-- standards;
-- public company information.
-
-### Workspace/document question
-
-Inspect the relevant source before asking the user.
-
-Examples:
-
-- what the existing contract says;
-- how the current code behaves;
-- what a prior plan decided;
-- values already contained in uploaded data.
-
-### Calculation
-
-Compute it from explicit inputs. Record inputs and formula/logic when the result is material.
-
-### Private contextual fact
-
-Ask the user if it is not available in connected sources.
-
-Examples:
-
-- internal budget;
-- team capability;
-- unpublished customer behavior;
-- founder constraints;
-- private historical performance.
-
-### Decision or preference
-
-The agent can recommend, but the user decides.
-
-### Context-specific hypothesis
-
-Research can inform it, but do not claim external evidence validates the target context unless it actually does.
-
-Example:
-
-Industry surveys may support the plausibility that payroll continuity is painful, but they do not prove that a specific local segment will buy a specific service at a specific price.
-
-## Evidence quality
-
-Prefer evidence in roughly this order when appropriate:
-
-1. primary/authoritative sources;
-2. direct measurements or first-party documents;
-3. high-quality independent research;
-4. reputable secondary synthesis;
-5. community/experiential evidence;
-6. anecdote or weak proxy.
-
-The appropriate source depends on the question. Community evidence may be valuable for lived experience while being poor evidence for a precise market statistic.
-
-## Freshness
-
-Ask whether the claim can change materially over time.
-
-For time-sensitive evidence, record:
-
-- publication/observation date;
-- access date when useful;
-- relevant period represented by the data.
-
-Do not treat stale evidence as current without qualification.
-
-## Geography and population
-
-Evidence must match the population being reasoned about.
-
-Record important differences such as:
-
-- country/territory/state;
-- business size;
-- industry;
-- customer type;
-- time period;
-- regulatory regime.
-
-Do not present evidence from a different population as directly representative without explaining the limitation.
-
-## Conflicting evidence
-
-When trustworthy sources disagree:
-
-- preserve the disagreement;
-- inspect definitions/methodology/time period;
-- identify which claim each source actually supports;
-- reduce confidence when appropriate;
-- do not force a false consensus.
-
-## Research output into the model
-
-A material research result should update:
-
-- the claim it supports or contradicts;
-- source/provenance;
-- date/freshness;
-- confidence;
-- implications for current decisions;
-- any newly exposed question.
-
-Research is useful only when it changes or strengthens the understanding graph.
+A research result belongs in the model when it changes or strengthens a material claim. Link it to what it supports or contradicts, record its source and date, and update confidence, decisions, and questions as needed. Research that leaves the understanding unchanged need not become another entry.
