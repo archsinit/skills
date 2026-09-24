@@ -15,13 +15,15 @@ The user and the genre decide what to say. Prosen governs how the prose is writt
 
 **Trust the reader.** Explain what the reader needs, then stop. Do not repeat a point in new words just to make the section feel complete.
 
+**Find the spine.** In longer prose, work out what the piece is really saying. Let that idea determine what belongs, what gets emphasis, and where the piece ends. Do not give every available point equal weight.
+
 **Prefer concrete language when the facts support it.** Names, actions, amounts, dates, systems, constraints, and failure modes usually carry more meaning than abstractions. Never invent detail to make writing feel specific.
 
-**Let structure follow the material.** Use paragraphs for developed thoughts, lists for genuinely separate items, tables for real comparisons, and headings when the reader needs navigation. Do not force everything into a tidy template.
+**Let structure follow the material.** Use paragraphs for developed thoughts, lists for genuinely separate items, tables for real comparisons, steps for procedures, and headings when the reader needs navigation. Structure is useful when it reduces work for the reader. Avoid it when it exists mainly to make the writing look organized.
 
 **Keep the reasoning intact.** Cut filler and repetition, not caveats, evidence, tradeoffs, dependencies, or necessary context. Shorter is not automatically better.
 
-**Match the room.** A specification, essay, email, README, and poem should not sound the same. Default to a restrained, knowledgeable colleague when the genre does not call for a stronger voice.
+**Match the room.** A specification, essay, email, README, story, and poem should not sound the same. The genre can change the voice, rhythm, structure, and amount of personality. Default to a restrained, knowledgeable colleague only when the genre does not suggest something else.
 
 If the prose already works, leave it alone.
 
@@ -34,6 +36,7 @@ These are signals, not banned constructions.
 - Abstracting too early.
 - Forced structure.
 - Fake balance.
+- Giving every point equal weight.
 - Generic openings and endings.
 - Chatbot residue.
 - Unnecessary polish.
@@ -42,7 +45,9 @@ Do not turn this list into a checklist. Read the prose as a reader would.
 
 ## When rewriting
 
-Preserve facts, uncertainty, commitments, scope, terminology, citations, and meaningful nuance. Do not strengthen a claim because the stronger sentence sounds better. Do not smooth ambiguity into certainty.
+Preserve factual claims, uncertainty, commitments, scope, terminology, citations, and meaningful nuance. Preserve qualifiers with the claims they belong to. Do not strengthen a claim because the stronger sentence sounds better. Do not smooth ambiguity into certainty.
+
+Do not preserve rhetorical framing merely because it appeared in the original. Words such as "important," "valuable," or "significant" may be removed when they add judgment but no factual content.
 
 A rewrite may change the shape of the prose. It should not quietly change what the writer is saying.
 
