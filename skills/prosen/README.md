@@ -10,17 +10,17 @@ It does not try to make text statistically "human." It does not ban ordinary wor
 
 The whole skill lives in [SKILL.md](SKILL.md).
 
-## Early comparison
+## Writing comparison
 
-This is not a benchmark or ranking. It is one prompt written four ways so the differences are visible.
+This is not a benchmark or ranking. It is one prompt run separately with four different writing skills so you can read the outputs and decide which approach fits your own work.
 
-The three external examples below use the published guidance from:
+External skills:
 
 - [Humanizer](https://github.com/spuvr/humanizer)
 - [Slopless](https://github.com/BioInfo/slopless)
 - [Human Writing](https://github.com/1999AZZAR/human-writing-skill)
 
-All four versions use the same prompt.
+The outputs below were supplied from separate runs and are reproduced without rewriting.
 
 ### Prompt
 
@@ -28,71 +28,56 @@ All four versions use the same prompt.
 
 ### Humanizer
 
-At 9:07 on Monday morning, someone is copying a customer name from Slack into Jira, then opening the CRM to paste it there too. None of these tools is broken. In fact, each one probably solved a real problem when the company bought it.
+Before you can start the report, you have to update the task board to say you've started the report. Then you need to dismiss the reminder asking whether you've updated the task board.
 
-The trouble starts when every solution asks the worker to become the glue.
+Each step has a reasonable explanation. A manager needs to know what's happening. A colleague needs to plan their part. But the person writing the report now has two jobs: doing the work and keeping a small audience informed that the work is being done.
 
-A new project tracker makes assignments clearer, but now someone has to keep the tracker current. A meeting recorder saves notes, but people still have to review the transcript, pull out the decisions, and move them somewhere useful. The expense app replaces paper receipts with photographs, categories, approval rules, and the occasional fifteen-minute argument with a dropdown menu.
+Office tools often become harder to use this way, a little at a time. A shared spreadsheet gets extra columns because someone might need those details later. Soon, entering a simple expense means finding a project code, choosing between six nearly identical categories, and asking which tab is current. People put it off until Friday, when nobody remembers what the taxi was for.
 
-This is how work gets heavier without looking heavier. The old task disappears, but a layer of coordination takes its place.
+Chat makes it easy to ask a quick question. It also makes it easy for twelve people to ask quick questions while you're trying to finish something. You can spend an afternoon being helpful and still leave with your own work untouched.
 
-Sometimes the extra layer is worth it. A shared system can make work visible to people who were previously guessing. But a tool should remove more effort than it creates. That sounds obvious until a company has twenty of them, each saving time inside its own little box.
+The awkward part is that these tools usually do help someone. The extra fields make the finance team's job easier. The task board saves the manager a meeting. The effort has moved, and the person taking it on may have little say in the decision.
 
-The person doing the job experiences the boxes all at once.
+Before adding another tool, it's worth watching someone complete an ordinary task with the tools already in place. Sit beside them while they submit an expense. Stay for the part where they have to reset their password.
 
 ### Slopless
 
-A tool can remove one task and create three smaller ones around it.
+A new workplace tool usually arrives with a reasonable promise: less typing, fewer emails, an easier way to find what you need. Then the upkeep starts. A project board can help everyone see who owns a task, but someone has to update it, answer comments, and explain why its status differs from the spreadsheet the team still uses.
 
-Take project management software. Before it arrives, a team may coordinate badly through email and meetings. After it arrives, assignments are easier to see, but someone has to update statuses, maintain fields, clean up stale tickets, and remind everyone to use the system correctly.
+Sometimes the tool adds work because the old process never goes away. Both systems stay. An employee enters expenses in an app, then emails the receipts to a manager who wants to review them separately before approving the same claim. The app may be quick to use; the full process is still slow.
 
-The same thing happens with communication tools. Slack makes a quick question easier than writing an email. It also creates another place to check, another stream of interruptions, and another archive where a decision can disappear.
+Other tools make it too easy to interrupt people. Chat makes a small question easy to send, even when answering it requires someone else to put down a complicated piece of work and recover their place afterward. Each message looks harmless. By the afternoon, a person can have answered every question and barely touched the task they meant to finish.
 
-Automation can do this too. A form may save ten minutes of manual entry while adding approval rules, exception handling, and troubleshooting that nobody counted when the tool was chosen.
-
-None of this makes the tools useless. The mistake is measuring only the work they remove.
-
-A useful tool reduces the total effort required to get the job done. That includes the time spent feeding it, checking it, fixing it, and moving information between it and everything else.
-
-If people spend more time managing the system than benefiting from it, the system has become part of the workload.
+The useful test is what disappears. If a new tool replaces a weekly status meeting or removes the need to enter an address twice, it has saved someone effort. If every existing step remains, the team has another place to check before it can call the work done.
 
 ### Human Writing
 
-Workplace tools make work harder when the coordination and maintenance they introduce outweigh the task they were meant to simplify.
+A tool can make one task easier while adding work around it. Sending a message takes seconds, but keeping up with messages can consume an afternoon. Updating a project board may help a manager see what is happening, while leaving everyone else with another place to report what they have already said in a meeting.
 
-A project management system, for example, can make ownership and deadlines easier to see. It also requires people to update tasks, maintain fields, close outdated items, and learn a shared workflow. If the team still coordinates through email and meetings, the new system may add another layer rather than replace one.
+Consider a team that adopts a scheduling app to avoid long email exchanges. It works well until people have to maintain both the app and their usual calendars. Someone forgets to update one, a meeting lands in the wrong slot, and the team returns to email to sort it out. The tool has shifted the effort rather than removed it.
 
-Communication tools create a similar tradeoff. Instant messaging makes quick questions convenient, but it can fragment decisions across channels and increase interruptions. Employees may spend less time composing formal messages while spending more time monitoring conversations and searching for information later.
+Templates can cause similar trouble. A standard form makes routine requests easier to process, but an unusual request may not fit its boxes. An employee then spends twenty minutes choosing the least misleading category and writing an explanation that could have been a short conversation.
 
-Automation has its own maintenance cost. A workflow that saves routine data entry may still require exception handling, approvals, monitoring, and troubleshooting.
+These frustrations often arise because using a tool becomes a requirement without replacing an older requirement. The spreadsheet stays. The weekly meeting stays. The new dashboard joins them.
 
-The relevant question is therefore not whether a tool makes one task faster. It is whether the tool reduces the total effort required to complete the work.
-
-That total includes learning the system, keeping it accurate, handling failures, and connecting it to the rest of the workplace. A tool is useful when those costs remain lower than the work it removes.
+Before adding another system, a workplace should ask what people will be able to stop doing. If the answer is unclear, the tool may simply become another obligation. Sometimes the most useful improvement is retiring an old form, reducing duplicate updates, or agreeing that one record is enough.
 
 ### Prosen
 
-A new tool rarely arrives alone. It brings a login, a workflow, a set of fields to keep current, and one more place where information can live.
+A new tool often arrives with a promise: fewer emails, faster decisions, less routine work. Sometimes it delivers. Sometimes it gives everyone another place to check.
 
-A project tracker can make deadlines easier to see. It can also leave the team updating tickets after the real conversation already happened in a meeting. Slack makes quick questions painless, but now a decision might be in email, Slack, the project tracker, or someone's notes. An automated approval can save routine work until an unusual case appears and nobody knows why the request is stuck.
+Consider a team that adopts a project tracker. Before, people discussed deadlines in a weekly meeting and kept a shared list. Now they update the tracker, explain the updates in chat, and attend the same meeting. When a deadline changes, someone has to remember to change it in three places. The tool can organize the work, but the team has added it without deciding what it replaces.
 
-The problem is not that these tools are bad. Most of them solve something.
+Scheduling software creates a different problem. It makes filling an empty slot so easy that a calendar can become packed with meetings. The person sending an invitation saves a few minutes of coordination; the people accepting it may lose the uninterrupted hour they needed to finish a report.
 
-The problem is that companies tend to count the work a tool removes and ignore the work needed to support the tool itself. Someone has to enter the information, keep it accurate, handle exceptions, and connect it to everything around it.
+Even a useful template can become a burden. A form designed to capture every possible detail may require ten fields for a request that needs one sentence. Employees learn to enter “not applicable” repeatedly, while the person reviewing the form searches for the information that matters.
 
-Sometimes that extra work is a good trade. Shared systems can prevent missed handoffs and make a growing team easier to coordinate.
+These problems are easy to overlook because the extra work comes in small pieces: one notification, one duplicate entry, one more status update. Across a team, those pieces accumulate.
 
-But the test should be the whole job, not the feature the tool replaced. If a five-minute task disappears and ten minutes of maintenance takes its place, the work did not get easier. It moved.
+Before adding a tool, it helps to ask what people will be able to stop doing. After it has been in use for a while, ask whether they have actually stopped. If the old tasks remain and new ones have appeared, the promise of easier work still needs to be kept.
 
+## More comparisons later
 
-## What differs
+One essay is not enough to define a writing style. Future comparisons can use the same approach with documentation, business writing, explanations, creative work, and other forms of prose.
 
-Humanizer leans toward voice, rhythm, and a visible writer.
-
-Slopless is more direct and deliberately strips common LLM habits.
-
-Human Writing is more conservative and standards-driven.
-
-Prosen aims for a middle ground: direct and concrete, but without mechanical bans or a deliberate attempt to sound "human."
-
-These examples are style approximations based on each project's published guidance, not outputs generated by running those repositories in separate agent sessions. The comparison is intentionally small for now.
+The point is not to prove that one skill is best. It is to make the differences visible enough that a reader can choose for themselves.
