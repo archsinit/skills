@@ -2,7 +2,9 @@
 
 This repository contains reusable Agent Skills for rigorous knowledge work.
 
-The first skill family is **Sensify**. Sensify is a method for turning incomplete, implicit, uncertain, or contradictory thinking into an explicit, evidence-aware, decision-ready model before downstream work begins.
+The first skill family is **Sensify**. On an explicit request, it turns incomplete, implicit, uncertain, or contradictory thinking into an explicit, evidence-aware, decision-ready model before downstream work begins.
+
+Invoke it explicitly, for example with `$sensify` or `$sensify-business`. Sensify does not start automatically for an ordinary request.
 
 ## Why Sensify exists
 
@@ -15,7 +17,7 @@ Sensify changes the agent's job from "infer the missing pieces and proceed" to:
 3. challenge unsupported assumptions and contradictions;
 4. ask the user only for private facts, judgments, preferences, and decisions;
 5. persist the evolving understanding;
-6. stop only when the model is decision-ready, not merely when the conversation runs out of questions.
+6. finish when the model is decision-ready, not merely when the conversation runs out of questions, while allowing the user to move on earlier with consequential gaps recorded.
 
 ## Skills
 
@@ -67,15 +69,15 @@ The main `SKILL.md` files are intentionally compact. Detailed behavior is split 
 - **The agent owns researchable facts.** Do not ask the user for information the agent can reasonably discover itself.
 - **Agreement is not the goal.** The agent should surface weak logic, contradictions, hidden assumptions, missing dependencies, and inconvenient evidence.
 - **Uncertainty is acceptable; hidden uncertainty is not.** A low-confidence hypothesis can remain in the model if it is explicitly labeled and its consequences are understood.
-- **Question priority follows leverage, not document order.** High-impact, uncertain, hard-to-reverse, blocking questions come first.
+- **Question priority follows leverage, not document order.** High-impact, uncertain, hard-to-reverse, blocking questions come first. Related independent questions can be bundled into fuller, dictation-friendly rounds.
 - **Persistence is part of reasoning.** Important knowledge should be captured as it is established rather than reconstructed later from conversation history.
 - **The output is a model, not a transcript.** Sensify stores what the current understanding is, why it is believed, what contradicts it, and what could cause it to be reconsidered.
 
 ## Persistence
 
-Sensify is storage-neutral. A deployment may persist the model in project files, Notion, Obsidian, a wiki, a database, or another knowledge system. The logical schema is the same regardless of backend.
+Sensify is storage-neutral. Maintain one readable, evolving model per initiative and link related models. A deployment may persist it in project files, Notion, Obsidian, a wiki, a database, or another knowledge system. The logical schema is the same regardless of backend. Downstream work should read the model and write consequential discoveries back.
 
-When no external backend has been selected and a writable workspace exists, the included file templates provide a local fallback.
+When no connected backend has been verified and a writable workspace exists, the included file templates provide a local fallback. Notion is a candidate for a growing knowledge system, pending verification of the connection's read and write capabilities.
 
 ## Status
 

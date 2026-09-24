@@ -1,15 +1,15 @@
 ---
 name: sensify-business
-description: Sensify a startup, business idea, business model, expansion, or major business decision into an explicit, evidence-aware Business Understanding Model. Use when planning a business, pressure-testing a business model, clarifying how a company will work, or preparing reliable context for later business plans, presentations, financial models, operating plans, or validation work.
+description: Build a decision-ready Business Understanding Model through the Sensify interview. Use only when the user explicitly asks to Sensify a business or explicitly invokes Sensify on business work.
 ---
 
 # Sensify Business
 
-Use this skill as a specialization of `sensify`. If the environment can load skills compositionally, load `sensify` as the base skill. Otherwise enforce its core behavior directly: typed knowledge, autonomous research, dependency-frontier questioning, aggressive challenge, user-owned decisions, recommendations, persistence, and decision-ready completion.
+Use this skill after an explicit request to Sensify a business, whether the user names `sensify` or `sensify-business`. Do not start it automatically for an ordinary business request. If the environment can load skills compositionally, load `sensify` as the base skill. Otherwise enforce its core behavior directly: typed knowledge, autonomous research, dependency-frontier questioning, rigorous challenge, user-owned decisions, recommendations, persistence, and decision-ready completion.
 
 The deliverable is a **Business Understanding Model**. It is not a traditional business plan and it is not a pitch deck.
 
-The goal is to make the business understandable enough that future work can consume a coherent model instead of rebuilding founder intent from scattered conversations.
+The goal is to make the business understandable enough that future work can consume a coherent model instead of rebuilding founder intent from scattered conversations. Keep one evolving model for each business, with a readable overview and structured records for material claims and decisions.
 
 ## Core stance
 
@@ -34,7 +34,7 @@ In particular:
 
 Maintain the Business Understanding Model using [references/business-understanding-model.md](references/business-understanding-model.md).
 
-When a file backend is the active persistence method, prefer `BUSINESS-UNDERSTANDING.md` using [assets/BUSINESS-UNDERSTANDING.template.md](assets/BUSINESS-UNDERSTANDING.template.md).
+When a file backend is the active persistence method, prefer `BUSINESS-UNDERSTANDING.md` using [assets/BUSINESS-UNDERSTANDING.template.md](assets/BUSINESS-UNDERSTANDING.template.md). When a connected knowledge system such as Notion is selected, maintain the same logical model there and verify that it can support the needed reads, updates, links, and history before treating it as canonical.
 
 Do not fill every section mechanically. Build the model in the order that reduces the most consequential uncertainty.
 
@@ -193,7 +193,7 @@ At handoff, the Business Understanding Model should make clear:
 - what remains to be validated;
 - which unresolved questions are intentionally deferred.
 
-Present the critical assumptions, major risks, open questions, and any decisions you still recommend reconsidering. Ask the user to confirm that the model accurately represents their intended business before declaring the Sensify phase complete.
+Present the critical assumptions, major risks, open questions, and any decisions you still recommend reconsidering. Ask the user to confirm that the model accurately represents their intended business before declaring the Sensify phase complete. If the user chooses to move on earlier, preserve the consequential gaps without claiming completion and follow their direction.
 
 ## Handoff contract
 
@@ -205,3 +205,5 @@ They should not restart generic founder discovery. Ask new questions only when:
 - an existing item is too uncertain for the downstream decision;
 - the downstream work exposes a contradiction;
 - a material fact has become stale.
+
+Write consequential discoveries, changed assumptions, and reopened decisions back to the canonical model when possible. This does not itself restart the Sensify interview.

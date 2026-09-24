@@ -1,74 +1,43 @@
 # Understanding Model
 
-> Canonical model for the current work. This is not a transcript.
+> Current understanding of this initiative. Keep this readable without the conversation; record only material claims and changes.
 
-## Purpose and outcome
+## Purpose and approach
 
-- Objective:
-- Why it matters:
-- Success criteria:
-- Scope:
-- Time horizon:
+- Initiative:
+- Outcome and why it matters:
+- Scope and success criteria:
+- Proposed mechanism:
+- Main constraints:
 
-## Proposed mechanism
+## Current understanding
 
-Describe how the current approach is expected to achieve the outcome.
-
-## Definitions
-
-| Term | Canonical meaning | Notes |
-|---|---|---|
-
-## Facts
-
-| ID | Statement | Source / date | Confidence | Importance |
-|---|---|---|---|---|
-
-## Private facts
-
-| ID | Statement | Source | Importance |
-|---|---|---|---|
+Describe how the initiative is intended to work. Distinguish established information from beliefs where the distinction affects a decision.
 
 ## Decisions
 
-| ID | Decision | Status | Rationale | Tradeoffs | Reconsider if |
-|---|---|---|---|---|---|
-
-## Assumptions and hypotheses
-
-| ID | Statement | Type | Status | Confidence | Impact if wrong | Validation needed |
-|---|---|---|---|---|---|---|
-
-## Constraints and preferences
-
-| ID | Statement | Type | Hard/soft | Notes |
-|---|---|---|---|---|
-
-## Risks
-
-| ID | Risk | Threatens | Consequence | Current response |
-|---|---|---|---|---|
-
-## Contradictions
-
-| ID | Conflict | Status | Resolution / next step |
+| Decision | Why | Tradeoff accepted | Reconsider if |
 |---|---|---|---|
 
-## Evidence
+## Critical assumptions and hypotheses
 
-| ID | Evidence | Supports / contradicts | Source / date | Limitations |
-|---|---|---|---|---|
+| Claim | Current basis / confidence | Impact if wrong | Evidence needed |
+|---|---|---|---|
 
-## Open questions
+## Evidence and sources
 
-| ID | Question | Depends on | Priority | Owner | Status |
-|---|---|---|---|---|---|
+| Finding | Supports or challenges | Source / date | Limits |
+|---|---|---|---|
 
-## Validation / research agenda
+## Risks, contradictions, and open questions
 
-| ID | Claim to test | Evidence needed | Method | Status |
-|---|---|---|---|---|
+| Item | Why it matters | Owner / next step | Status |
+|---|---|---|---|
+
+## Related models
+
+Link other initiatives only when they materially inform this one. Check whether a borrowed claim still applies here.
 
 ## Material history
 
-Record only meaningful supersessions, reopened decisions, and model changes that future readers need to understand.
+Summarize important decisions that were reopened or superseded, including what changed and why.

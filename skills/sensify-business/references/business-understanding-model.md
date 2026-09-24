@@ -9,6 +9,8 @@ It combines two layers:
 
 The second layer prevents a polished business narrative from hiding weak premises.
 
+Maintain one evolving model per business. Lead with a readable account of its purpose, customer, mechanism, important decisions, and present state. Use typed records for claims whose evidence, uncertainty, dependencies, or history affect decisions. Link related initiatives without merging their assumptions into this business as facts.
+
 ## Model sections
 
 ### 1. Purpose and founder outcomes
