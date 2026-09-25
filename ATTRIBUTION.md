@@ -14,3 +14,5 @@ Sensify broadens those ideas for general knowledge work and adds a typed epistem
 Source repository: `mattpocock/skills` on GitHub.
 
 At the time Sensify was created, the source repository declared the MIT license. This file is attribution, not a declaration of the license for this repository. No license has yet been selected for this repository.
+
+Define Requirements was informed by Matt Pocock's `to-spec` and `to-tickets` workflow and pstack's emphasis on observable verification. Its instructions were written for this repository's product-definition handoff; no source skill text was copied.

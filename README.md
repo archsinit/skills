@@ -2,7 +2,7 @@
 
 This repository contains reusable Agent Skills for rigorous knowledge work.
 
-The first skill family is **Sensify**. On an explicit request, it turns incomplete, implicit, uncertain, or contradictory thinking into an explicit, evidence-aware, decision-ready model before downstream work begins.
+**Sensify** turns incomplete or contradictory thinking into an evidence-aware, decision-ready model. **Define Requirements** carries an established product definition into testable release behavior.
 
 Invoke it explicitly, for example with `$sensify` or `$sensify-business`. Sensify does not start automatically for an ordinary request.
 
@@ -43,6 +43,10 @@ It produces and maintains a **Business Understanding Model** rather than a conve
 
 Downstream skills can later turn that model into business plans, presentations, financial models, process maps, operating documents, sales material, validation programs, or implementation work without reconstructing the founder's intent from scratch.
 
+### `define-requirements`
+
+A focused bridge from a settled product definition to a first-release requirements document. It traces user and operator journeys, probes consequential failure and recovery cases, distinguishes confirmed behavior from open decisions, and checks that each requirement can be verified. It leaves screen layouts, technical architecture, and task sequencing to later work.
+
 ## Repository layout
 
 ```text
@@ -51,10 +55,12 @@ skills/
 │   ├── SKILL.md
 │   ├── references/
 │   └── assets/
-└── sensify-business/
-    ├── SKILL.md
-    ├── references/
-    └── assets/
+├── sensify-business/
+│   ├── SKILL.md
+│   ├── references/
+│   └── assets/
+└── define-requirements/
+    └── SKILL.md
 
 tests/
 ├── sensify/
@@ -81,7 +87,7 @@ When no connected backend has been verified and a writable workspace exists, the
 
 ## Status
 
-This repository currently contains the first implementation of the Sensify method and the business specialization. Storage adapters and downstream artifact-generation skills are intentionally out of scope for the first version.
+This repository contains Sensify, its business specialization, and Define Requirements. Storage adapters and other downstream skills remain future work.
 
 ## Attribution
 
