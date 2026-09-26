@@ -1,31 +1,37 @@
 ---
 name: define-requirements
-description: Turn a settled product definition into testable release requirements through focused questioning. Use when the user wants to define what a product must do before UX, architecture, or implementation; do not use for initial product discovery or a technical build plan.
+description: Turn a settled product definition into testable release requirements. Resolve all non-UI/UX requirements before UI/UX, the final requirements pass. Use before architecture or implementation, not for initial product discovery.
 ---
 
 # Define requirements
 
-Produce a requirements document that lets design and implementation proceed without inventing product behavior. Start from the current product definition and decision history. Preserve their scope and vocabulary; do not repeat settled product questions unless a concrete contradiction, missing case, or new evidence warrants reopening one.
+Produce a requirements record that lets later stages proceed without guessing what the product must do. Start with the settled product definition and decision history. Do not reopen a choice unless a contradiction, missing case, or new evidence makes it necessary.
 
-## Find the decision frontier
+## Map the whole journey
 
-Before drafting or extending feature requirements, make a visible end-to-end flow inventory for every actor. Start where each person first arrives, including access or sign-in, and follow every handoff to the promised outcome and later changes. Include how a record is created, resumed, approved, viewed, revised, withdrawn, and recovered wherever those actions apply. For each transition, note the normal path, consequential alternative, failure and recovery state, what the person sees or controls, and the current decision or requirement that covers it. Mark missing coverage explicitly; a feature list, collection of isolated screens, or generic open-decisions heading does not replace this inventory. Keep the inventory proportionate to the product and revisit it after material decisions.
+List each actor's path from first entry to the promised result and later use. Include access, creating and resuming work, approval, public and private states, changes, withdrawal, failure, and recovery where they apply. For each handoff, record the normal path, consequential alternatives, what can fail, and the decision or requirement that covers it. Mark gaps. A feature list or a set of screen mockups cannot establish end-to-end coverage.
 
-Check cross-cutting needs along those flows, including access, privacy, accessibility, reliability, content integrity, and operational recovery. Trace private data and actions separately from public pages. Do not turn every imaginable concern into a requirement, but do not omit an entry point or transition merely because it seems routine or belongs to a later design or architecture stage. Record its decision owner and deadline instead.
+Check concerns that cross the journey: privacy, security, accessibility, evidence or content integrity, reliability, data retention, operating cost, and recovery. Include a concern only when the product needs it, but do not omit a necessary transition because it seems routine or technical.
 
-Separate four things: requirements supported by an existing decision, proposed requirements awaiting a product decision, assumptions needing validation, and choices that belong to UX, architecture, or implementation. Research facts that can be established from available sources. Ask the user for consequential product judgments. Prioritize questions by the decisions they unlock and the cost of guessing wrong; offer a recommendation and tradeoff for a material choice. Group independent questions into a manageable round, then update the document as answers arrive.
+## Settle non-UI/UX requirements first
 
-## Write the contract
+Work through the product's editorial or business rules, actor responsibilities, data and content lifecycle, access, integrations, rights, failure behavior, operating constraints, and release and recovery requirements before asking about UI/UX. Trace each decision back through the full journey. Separate an accepted decision from a proposal, an assumption that needs validation, and an implementation choice.
 
-Use one canonical requirements document in the project, or update the existing one. Give each substantive requirement a stable identifier. State the actor, condition, observable behavior or constraint, and a way to verify it. Link it to the source product decision or user answer. Record meaningful exceptions and recovery behavior. Write quality requirements only when a concrete risk or intended experience justifies them; make the intended threshold observable, or mark the threshold as open.
+Research facts that can be established from sources. Ask the user for consequential judgments the sources cannot settle. Give a recommendation, the effect of each choice, and a manageable group of independent questions. Record each answer before moving on. Do not turn the recommendation into a decision without the user's answer. If a decision affects several steps, update all of them.
 
-Keep requirements distinct from screen layouts, technology choices, task sequencing, and tests tied to a particular implementation. Put excluded scope and future compatibility constraints in their own sections instead of disguising them as current user behavior. Acceptance examples may describe inputs and visible results, but should not prescribe internal design. Maintain an explicit open-decisions section with owner, consequence, and the stage by which each decision must be made. Do not silently promote a plausible proposal to a confirmed requirement.
+Use text or a simple flow to explain non-UI/UX choices. Defer screen layouts, navigation, interaction details, visual style, responsive treatment, and UI prototypes until the other requirements are settled. When a behavior has a visible consequence, record the behavior now and leave its presentation for the UI/UX pass.
 
-## Check readiness at the requested level
+## Do UI/UX last
 
-Trace each first-release promise and each inventoried flow transition to at least one requirement or an explicit open decision, and each requirement back to a product goal or decision. Walk the journeys from first arrival through final outcome and later use, including access, creation, failure, correction, withdrawal, and recovery where relevant. Exercise representative end-to-end scenarios that cross screens and private/public boundaries; isolated screen reviews cannot establish flow completeness. Check that each acceptance condition could fail in a broken product and can be observed by a user or verifier. Remove duplicates and speculative scope.
+Once the non-UI/UX decisions are complete, work through the reader and operator experience from entry to completion and recovery. Settle screens, navigation, controls, content presentation, empty and error states, accessibility, responsive behavior, and visual direction. Build viewable prototypes where seeing a choice would help the user judge it. Revisit the complete journey after the UI/UX pass; a polished screen can still hide a missing handoff.
 
-Distinguish **behavior-ready** from **build-ready**. Behavior-ready means consequential product behavior is settled and remaining choices are explicitly assigned to UX, architecture, or operations. Build-ready means a developer can implement and release the product without seeking another product, design, technical, or operating decision from the user. If the user asks for a no-guesswork build contract, audit all of those domains. Either record each required decision before implementation or record a clear delegation with constraints, decision owner, and where the chosen answer will be written. A list of feature checks alone never proves build readiness. Do not call either level complete while a consequential choice or inventoried transition is hidden behind vague wording, a missing screen, or an assumed default.
+## Write and check the contract
 
-Present a compact review of the requirements, open decisions, delegated choices, and readiness level. Ask the user whether it matches their intent before calling it final. If the user stops earlier, preserve the working draft and identify what remains unresolved.
+Keep one canonical requirements document or update the existing one. Give each substantive requirement a stable ID. State the actor, condition, observable behavior or constraint, and a check that could fail in a broken product. Link it to the product decision or user answer. Include meaningful exceptions and recovery paths. Set measurable quality thresholds when the product needs them; otherwise mark the threshold open. Keep future scope separate from launch behavior.
+
+Trace every first-release promise and journey transition to a requirement or an explicit open decision. Trace requirements back to product goals or decisions. Review scenarios that cross private and public states, including failure and recovery. Remove duplicates and speculative scope.
+
+State readiness accurately. **Requirements-ready** means product behavior and UI/UX choices are settled, with technical choices assigned to their later stage. **Build-ready** means no product, design, technical, or operating decision remains for the builder to guess; record each answer or an explicit delegation with constraints and an owner. Do not call the package complete while a consequential transition is missing or an assumption is presented as fact.
+
+Give the user a compact account of settled decisions, remaining gaps, and readiness. If work stops early, preserve the draft and identify the next unresolved decision.
 
