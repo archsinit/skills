@@ -1,6 +1,6 @@
 ---
 name: define-requirements
-description: Turn a settled product definition into testable release requirements. Resolve all non-UI/UX requirements before UI/UX, the final requirements pass. Use before architecture or implementation, not for initial product discovery.
+description: Turn a settled product definition into testable release requirements and a handoff map for later delivery stages. Resolve non-UI/UX requirements before the final UI/UX pass. Use before architecture or implementation, not for initial product discovery.
 ---
 
 # Define requirements
@@ -25,13 +25,22 @@ Use text or a simple flow to explain non-UI/UX choices. Defer screen layouts, na
 
 Once the non-UI/UX decisions are complete, work through the reader and operator experience from entry to completion and recovery. Settle screens, navigation, controls, content presentation, empty and error states, accessibility, responsive behavior, and visual direction. Build viewable prototypes where seeing a choice would help the user judge it. Revisit the complete journey after the UI/UX pass; a polished screen can still hide a missing handoff.
 
+## Map the delivery flow beyond requirements
+
+Keep a separate handoff map for the work after requirements: architecture, development plan, environment setup, implementation, verification, deployment, first real use, and feedback or iteration. Include UI/UX as the final requirements pass before architecture. A product can pass a mockup review or a build check and still fail when a person first uses the complete service.
+
+For each stage, identify the decisions and evidence it needs from earlier stages, its expected output or check, and the owner of any open choice. Carry requirements through setup, release, and first real use: access, integrations, data migration, monitoring, backup and restore, rollback, operational ownership, and real content or transactions where relevant. Map how reports, corrections, usage evidence, and failures feed later changes to the product and its requirements. Revisit the map whenever a later stage exposes a missing behavior or invalid assumption.
+
+This skill records the handoffs and unresolved decisions; it does not make architecture or deployment choices by implication or claim those stages are complete. A technical decision may be assigned to a later stage only with its required outcome, constraints, owner, and validation point stated. A product behavior that affects the user stays in requirements.
+
 ## Write and check the contract
 
 Keep one canonical requirements document or update the existing one. Give each substantive requirement a stable ID. State the actor, condition, observable behavior or constraint, and a check that could fail in a broken product. Link it to the product decision or user answer. Include meaningful exceptions and recovery paths. Set measurable quality thresholds when the product needs them; otherwise mark the threshold open. Keep future scope separate from launch behavior.
 
 Trace every first-release promise and journey transition to a requirement or an explicit open decision. Trace requirements back to product goals or decisions. Review scenarios that cross private and public states, including failure and recovery. Remove duplicates and speculative scope.
 
+Check the requirements against the downstream handoff map. The development plan must be able to sequence the work; environment setup must be able to establish the chosen services and secrets; implementation must have observable acceptance conditions; verification must exercise complete normal, alternative, failure, and recovery paths; deployment must have release and reversal criteria; first real use must have an owner and a way to recognize success or failure. Record gaps without pretending that requirements work has executed those later stages.
+
 State readiness accurately. **Requirements-ready** means product behavior and UI/UX choices are settled, with technical choices assigned to their later stage. **Build-ready** means no product, design, technical, or operating decision remains for the builder to guess; record each answer or an explicit delegation with constraints and an owner. Do not call the package complete while a consequential transition is missing or an assumption is presented as fact.
 
 Give the user a compact account of settled decisions, remaining gaps, and readiness. If work stops early, preserve the draft and identify the next unresolved decision.
-
